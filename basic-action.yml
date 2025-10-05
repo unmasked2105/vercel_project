@@ -1,0 +1,14 @@
+name: Basic Action Demo
+
+on: [push]   # triggers whenever you push to GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # This step MUST include your email in its name
+      - name: Custom Step for 23f1001533@ds.study.iitm.ac.in
+        run: echo "Hello from GitHub Actions!"
